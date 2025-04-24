@@ -1901,7 +1901,7 @@ a:hover {
       -ms-flex-pack: center;
       justify-content: center;
       height: 70px;
-      background-color: #3f97da; }
+      background-color: #030608; }
     .uni-our-doctor-item-default .item-caption .item-caption-head .item-title {
       padding-left: 15px; }
       .uni-our-doctor-item-default .item-caption .item-caption-head .item-title h4 {
@@ -2632,7 +2632,7 @@ a:hover {
     justify-content: center;
     width: 100px;
     height: 100px;
-    background-color: #3f97da;
+    background-color: #000000;
     border: solid 1px #ffffff;
     border-radius: 50%;
     margin: auto; }
@@ -2821,7 +2821,7 @@ a:hover {
     -ms-flex-pack: center;
     justify-content: center;
     height: 70px;
-    background-color: #3f97da; }
+    background-color: #010305; }
   .uni-single-department-doctor-item .item-caption .item-caption-head .item-title {
     padding-left: 15px; }
     .uni-single-department-doctor-item .item-caption .item-caption-head .item-title h4 {
@@ -7095,3 +7095,91 @@ a:hover {
   .uni-shortcode-pricing-table-2 .panel-profresinal .panel-footer a {
     background-color: #3f97da;
     color: #fff; }
+
+
+
+
+    .uni-home-opening-book {
+      padding: 50px 0;
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .uni-home-title h3 {
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #2c3e50;
+      margin-bottom: 10px;
+  }
+  
+  .uni-underline {
+      width: 60px;
+      height: 4px;
+      background-color: #3498db;
+      margin: 10px 0 30px 0;
+  }
+  
+  .uni-services-opinging-hours-title h4 {
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: capitalize;
+      color: #34495e;
+  }
+  
+  .uni-services-opinging-hours .table td {
+      font-size: 18px;
+      padding: 10px 0;
+      font-weight: 500;
+      color: #2d3436;
+  }
+  
+  .input-group-addon i {
+      font-size: 16px;
+      color: #2980b9;
+  }
+  
+  .form-control {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 10px;
+  }
+  
+  textarea.form-control {
+      height: 140px;
+  }
+  
+  .vk-btn-send {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 12px 30px;
+      margin-top: 10px;
+      transition: 0.3s ease;
+      border-radius: 5px;
+  }
+  
+  .vk-btn-send:hover {
+      background-color: #2980b9;
+      color: #fff;
+      cursor: pointer;
+  }
+
+
+
+
+
+  .uni-home-our-services .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensures that the items are spaced evenly */
+    align-items: flex-start; /* Aligns the items to the top */
+}
+
+
+
+
+
+
