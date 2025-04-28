@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-<!--   [XR&CO'2014], Tue, 22 Oct  -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -129,6 +128,9 @@
                     <li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </li>
+            <li class="has-sub">
+                    <a href="#Appointment" class="booking-button">Appointment</a>
+            </li>            
         </ul>
         <div class="clearfix"></div>
     </div>
@@ -145,7 +147,7 @@
                             <div class="col-md-2">
                                 <!--LOGO-->
                                 <div class="wrapper-logo" style="display: flex; align-items: center; gap: 10px;">
-                                    <a class="logo-default" href="javascript:location.reload()" style="display: flex; align-items: center; text-decoration: none;">
+                                    <a class="logo-default" href="#" onclick="location.reload();" style="display: flex; align-items: center; text-decoration: none;">
                                         <img src="images/logo.jpg" alt="Veeram Clinic Logo" class="img-responsive" style="height: 60px;">
                                         <span style="font-size: 30px; font-weight: 700; color: #333; margin-left: 12px; letter-spacing: 1px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; white-space: nowrap;">
                                             <strong>
@@ -156,6 +158,7 @@
                                     </a>
                                 </div>
                             </div>
+                            
                             
                             <div class="col-md-10">
                                 <!--MENU TEXT-->
@@ -198,7 +201,7 @@
                                             <i class="fa fa-search" aria-hidden="true"></i>
                                         </li>
                                         <li class="uni-btn-appointment">
-                                            <a href="#">Appointment</a>
+                                            <a href="#Appointment">Appointment</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -283,6 +286,7 @@
                 </div>
 
                 <!--OPENING HOURS AND BOOK APPOINTMENT-->
+                <div id= "Appointment">
                 <div class="uni-home-opening-book">
                     <div class="container">
                         <div class="uni-home-opening-book-content">
@@ -331,78 +335,78 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="uni-single-department-appointment-form">
-
+                                
                                         <div class="uni-home-title">
-                                            <h3>Book appoitment</h3>
+                                            <h3>Book Appointment</h3>
                                             <div class="uni-underline"></div>
                                         </div>
-
-                                        <form action="#">
+                                
+                                        <form name="submit-to-google-sheet">
                                             <div class="row">
                                                 <!-- Left Column -->
-                                                <div class="col-md-5">
+                                                <div class="col-md-6">
                                                     <!-- Name -->
                                                     <div class="input-group form-group" style="margin-bottom: 15px;">
                                                         <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" name="name" value="" placeholder="Your Name">
+                                                        <input type="text" class="form-control" name="name" placeholder="Your Name">
                                                     </div>
-                                        
+                                
                                                     <!-- Phone -->
                                                     <div class="input-group form-group" style="margin-bottom: 15px;">
                                                         <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                                                        <input type="tel" class="form-control" name="phone" value="" placeholder="Phone Number">
+                                                        <input type="tel" class="form-control" name="phone" placeholder="Phone Number">
                                                     </div>
-                                        
+                                
                                                     <!-- Email -->
                                                     <div class="input-group form-group" style="margin-bottom: 15px;">
                                                         <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                                                        <input type="email" class="form-control" name="email" value="" placeholder="Email">
+                                                        <input type="email" class="form-control" name="email" placeholder="Email">
                                                     </div>
-                                        
-                                                    <!-- Department Dropdown -->
+                                
+                                                    <!-- Doctor Dropdown -->
                                                     <div class="input-group form-group" style="margin-bottom: 15px;">
-                                                        <span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i></span>
-                                                        <select class="form-control" name="department">
-                                                            <option value="" disabled selected>Select Department</option>
-                                                            <option value="Gynecologist">Gynecologist</option>
-                                                            <option value="Pulmonologist">Pulmonologist</option>
-                                                            <option value="Orthopedics">Orthopedics</option>
-                                                            <option value="Psychologist">Psychologist</option>
-                                                            <option value="General Physician">General Physician</option>
+                                                        <span class="input-group-addon"><i class="fa fa-user-md" aria-hidden="true"></i></span>
+                                                        <select class="form-control" name="doctor">
+                                                            <option value="" disabled selected>Select Doctor</option>
+                                                            <option value="Dr. PAVITRA S">Dr. PAVITRA S – General Physician</option>
+                                                            <option value="Dr. AJITESH">Dr. AJITESH – General Physician</option>
+                                                            <option value="Dr. RIYA KUMAR">Dr. RIYA KUMAR – Gynecologist</option>
+                                                            <option value="Dr. NASEEHA">Dr. NASEEHA – Pulmonologist</option>
+                                                            <option value="Dr. MADHUMITHA">Dr. MADHUMITHA – Psychologist</option>
                                                         </select>
                                                     </div>
-                                        
+                                
                                                     <!-- Date Picker -->
                                                     <div class="input-group form-group" style="margin-bottom: 15px;">
-                                                        <div class="input-group date date-check-in" data-date="12-02-2017" data-date-format="mm-dd-yyyy">
-                                                            <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-                                                            <input name="date1" class="form-control" type="text" value="12-02-2017">
-                                                            <span class="input-group-addon btn"><i class="fa fa-calendar" id="ti-calendar1" aria-hidden="true"></i></span>
-                                                        </div>
+                                                        <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                                        <input type="text" name="date1" class="form-control" placeholder="Select Date">
                                                     </div>
                                                 </div>
-                                        
+                                
                                                 <!-- Right Column -->
-                                                <div class="col-md-7">
+                                                <div class="col-md-6 d-flex flex-column justify-content-between">
                                                     <!-- Note / Message -->
                                                     <div class="input-group form-group" style="margin-bottom: 15px;">
-                                                        <textarea id="message" name="note" class="form-control" placeholder="Note"></textarea>
+                                                        <textarea id="message" name="note" class="form-control" placeholder="Write your message..." rows="8"></textarea>
                                                     </div>
-                                        
+                                
                                                     <!-- Submit Button -->
-                                                    <button class="vk-btn vk-btn-send">Send</button>
+                                                    <div class="form-group text-right" style="margin-top: auto;">
+                                                        <button type="submit" class="vk-btn vk-btn-send">Book Appointment</button>
+                                                        <div class="clearfix"></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </form>
-                                        
-                                        
+                                        <span id="msg"></span>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-
+            </div>
 
                 <!--DEPARTMENT-->
                 <div class="uni-hơm-1-department">
@@ -498,7 +502,7 @@
                                 <div class="item">
                                     <div class="uni-team-default">
                                         <div class="item-img">
-                                            <img src="images/team/.png" alt="" class="img-responsive">
+                                            <img src="images/team/img3.png" alt="" class="img-responsive">
                                         </div>
                                         <div class="item-caption">
                                             <div class="col-md-3 col-sm-3 col-xs-3 uni-clear-padding">
@@ -518,7 +522,7 @@
                                 <div class="item">
                                     <div class="uni-team-default">
                                         <div class="item-img">
-                                            <img src="images/team/.png" alt="" class="img-responsive">
+                                            <img src="images/team/img1.png" alt="" class="img-responsive">
                                         </div>
                                         <div class="item-caption">
                                             <div class="col-md-3 col-sm-3 col-xs-3 uni-clear-padding">
@@ -578,7 +582,7 @@
                                 <div class="item">
                                     <div class="uni-team-default">
                                         <div class="item-img">
-                                            <img src="images/team/img1.png" alt="" class="img-responsive">
+                                            <img src="images/team/img4.jpg" alt="" class="img-responsive">
                                         </div>
                                         <div class="item-caption">
                                             <div class="col-md-3 col-sm-3 col-xs-3 uni-clear-padding">
@@ -598,7 +602,7 @@
                                 <div class="item">
                                     <div class="uni-team-default">
                                         <div class="item-img">
-                                            <img src="images/team/img3.png" alt="" class="img-responsive">
+                                            <img src="images/team/img5.jpg" alt="" class="img-responsive">
                                         </div>
                                         <div class="item-caption">
                                             <div class="col-md-3 col-sm-3 col-xs-3 uni-clear-padding">
@@ -809,7 +813,7 @@
                                                 <div class="col-md-9 col-sm-8">
                                                     <div class="item-info-title">
                                                         <h4>Monali Mishra</h4>
-                                                        <p class="testimonial_subtitle">Myopia patient</p>
+                                                        
                                                     </div>
                                                     <div class="uni-divider"></div>
                                                 </div>
@@ -834,7 +838,7 @@
                                                 <div class="col-md-9 col-sm-8">
                                                     <div class="item-info-title">
                                                         <h4>Abhisekh Mohapatra</h4>
-                                                        <p class="testimonial_subtitle">Broken bone</p>
+                                                        
                                                     </div>
                                                     <div class="uni-divider"></div>
                                                 </div>
@@ -853,20 +857,20 @@
                                             <div class="row">
                                                 <div class="col-md-3 col-sm-4">
                                                     <div class="item-info-img">
-                                                        <img src="images/testimonial/img.png" alt="" class="img-responsive">
+                                                        <img src="images/testimonial/img2.png" alt="" class="img-responsive">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-9 col-sm-8">
                                                     <div class="item-info-title">
                                                         <h4>Nanda Kishore</h4>
-                                                        <p class="testimonial_subtitle">Myopia patient</p>
+                                                        
                                                     </div>
                                                     <div class="uni-divider"></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="item-caption">
-                                            <p>Really good medical services provided and appreciated their delivery commitments on reports and sample collections at the doorstep.</p>
+                                        <div class="item-caption" style="text-align: justify;">
+                                            <p>Excellent medical services with prompt and professional support. Truly appreciate their commitment to timely report delivery and doorstep sample collection.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -878,7 +882,7 @@
                                             <div class="row">
                                                 <div class="col-md-3 col-sm-4">
                                                     <div class="item-info-img">
-                                                        <img src="images/testimonial/img1.png" alt="" class="img-responsive">
+                                                        <img src="images/testimonial/img3.png" alt="" class="img-responsive">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-9 col-sm-8">
@@ -890,8 +894,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="item-caption">
-                                            <p>I'm very happy with the service, the staff is very friendly and professional. Highly recommended!</p>
+                                        <div class="item-caption" style="text-align: justify;">
+                                            <p>I’m extremely happy with the overall service experience. The staff are professional and well-trained, but also very friendly and approachable.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -899,6 +903,22 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-a134ed51-76b9-4d0f-9941-b7fc692e6f11" data-elfsight-app-lazy></div>
+
+
+
+<!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-002360bd-ff3e-4c46-9e0b-65ecbab6c6c8" data-elfsight-app-lazy></div>
+
+
+<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-2f6c1c6e-ed6e-43e1-9181-c00b82f3acb4" data-elfsight-app-lazy></div>
+
 
                 <!--FAQ'S  and LASTEST POST-->
                 <div class="uni-home-faq-latest-post">
@@ -1193,6 +1213,28 @@
 <script src="plugin/sticky/jquery.sticky.js"></script>
 
 <script src="js/main.js"></script>
+
+<script>
+    const scriptURL1 = 'https://script.google.com/macros/s/AKfycby_sU-dznxYjQm45Xa-stymbxWMwFWqrcFQPgS5qKvWw9HiNTfwVvhlMVleYBLrp7OC/exec'
+    const form1 = document.forms['submit-to-google-sheet']
+
+    const msg1 = document.getElementById("msg")
+
+    form1.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL1, { method: 'POST', body: new FormData(form1) })
+            .then(response => {
+                msg1.innerHTML = "✔️ Appointment booked successfully! Our staff will get in touch with you to confirm the details.";
+                setTimeout(function () {
+                    msg1.innerHTML = ""
+                }, 5000)
+                form1.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+
 </body>
 
 <!--   [XR&CO'2014], Tue, 22 Oct 2019 11:45:22 GMT -->
