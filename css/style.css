@@ -82,6 +82,17 @@ footer, header, menu, nav, section {
 body {
   line-height: 1; }
 
+    .book-now-button {
+  display:flex;
+  padding: 5px 5px;
+  background-color: #25D366;
+  color: white;
+    justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 ol, ul {
   list-style: none; }
 
