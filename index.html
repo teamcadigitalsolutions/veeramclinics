@@ -27,6 +27,18 @@
     <meta name="twitter:title" content="Veeram Clinics | Your Family Health Partner in Whitefield, Bengaluru">
     <meta name="twitter:description" content="General consultations, diagnostics, daycare, and vaccinations by expert doctors near Immadihalli, Whitefield.">-->
 
+    <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- jQuery (required for Owl Carousel) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
     <title>Veeram Clinics – Best Family Clinic Near Me in Whitefield & Bangalore</title>
     <meta name="description"
         content="Searching for a clinic near me in Bangalore? Veeram Clinics in Whitefield offers trusted family care, diagnostics, checkups, and vaccinations. Accessible from across Bangalore.">
@@ -612,6 +624,33 @@
                                                     </div>
                                                     <!-- Book Now button -->
                                                     <a href="https://wa.me/918884441253?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20PAVITRA%20S.%20Please%20let%20me%20know%20the%20available%20slots.%20Thank%20you."
+                                                        target="_blank" class="book-now-button">
+                                                        Book Now
+                                                    </a>
+                                                    <!-- Book Now button -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="uni-team-default">
+                                            <div class="item-img">
+                                                <img src="images/team/Dr.j.jpg" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="item-caption">
+                                                <div class="col-md-3 col-sm-3 col-xs-3 uni-clear-padding">
+                                                    <div class="item-icons">
+                                                        <img src="images/icons_box/icon_4/icon-11.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-9 col-sm-9 col-xs-9 uni-clear-padding">
+                                                    <div class="item-title">
+                                                        <h4>Dr. JYOTHSNA V. P.</h4>
+                                                        <span>General Physician doctor</span>
+                                                    </div>
+                                                    <!-- Book Now button -->
+                                                    <a href="https://wa.me/918884441253?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20JYOTHSNA.%20Please%20let%20me%20know%20the%20available%20slots.%20Thank%20you."
                                                         target="_blank" class="book-now-button">
                                                         Book Now
                                                     </a>
@@ -1428,9 +1467,36 @@
         })
     </script>
 
+    <script>
+$(document).ready(function(){
+  $(".uni-owl-four-item").owlCarousel({
+    loop: true,
+    margin: 30,
+    autoplay: true,
+    autoplayTimeout: 3000,  // 3 seconds between scrolls
+    autoplayHoverPause: true,
+    smartSpeed: 800,        // smooth scroll speed (ms)
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+});
+</script>
+
+
 
 </body>
 
 <!--   [XR&CO'2014], Tue, 22 Oct 2019 11:45:22 GMT -->
+
+
 
 </html>
