@@ -392,3 +392,120 @@ $(document).ready(function () {
         });
     }
 });
+
+
+$('.uni-owl-three-item').owlCarousel({
+    loop: false,        // 🔴 IMPORTANT: prevents duplicates
+    margin: 30,
+    nav: true,
+    dots: false,
+    autoplay: false,
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 2
+        },
+        992: {
+            items: 3
+        }
+    }
+});
+
+
+/* ===============================
+   OWL CAROUSEL
+================================ */
+$('.health-owl').owlCarousel({
+  loop: true,
+  margin: 25,
+  nav: true,
+  dots: false,
+  navText: ["‹", "›"],
+  responsive: {
+    0: { items: 1 },
+    576: { items: 2 },
+    768: { items: 3 },
+    992: { items: 4 },
+    1200: { items: 5 }
+  }
+});
+
+/* ===============================
+   MODAL + DATA
+================================ */
+
+let selectedPackage = {};
+
+/* OPEN MODAL */
+$('.package-card').on('click', function () {
+
+  selectedPackage = {
+    title: $(this).data('title'),
+    oldPrice: $(this).data('old'),
+    price: $(this).data('price'),
+    tests: $(this).data('tests'),
+    img: $(this).data('img')
+  };
+
+  $('#modalImg').attr('src', selectedPackage.img);
+  $('#modalTitle').text(selectedPackage.title);
+  $('#modalOld').text(selectedPackage.oldPrice);
+  $('#modalPrice').text(selectedPackage.price);
+
+  // BUILD TEST TABLE (5 PER ROW)
+  const testsArray = selectedPackage.tests.split(',');
+  let tableRows = '';
+
+  for (let i = 0; i < testsArray.length; i += 5) {
+    tableRows += `
+      <tr>
+        <td>${testsArray[i]?.trim() || ''}</td>
+        <td>${testsArray[i + 1]?.trim() || ''}</td>
+        <td>${testsArray[i + 2]?.trim() || ''}</td>
+        <td>${testsArray[i + 3]?.trim() || ''}</td>
+        <td>${testsArray[i + 4]?.trim() || ''}</td>
+      </tr>
+    `;
+  }
+
+  $('#modalTestsTable').html(tableRows);
+  $('#packageModal').fadeIn();
+});
+
+/* CLOSE MODAL */
+$('.close-modal, #packageModal').on('click', function (e) {
+  if (e.target === this) {
+    $('#packageModal').fadeOut();
+  }
+});
+
+/* WHATSAPP BOOKING */
+$('#whatsappBook').on('click', function (e) {
+  e.preventDefault();
+
+  const phoneNumber = "918884441253";
+
+  const message = `
+Hello 👋 *Veeram Clinics*,
+
+I would like to book the following health checkup package:
+
+🩺 *Package:* ${selectedPackage.title}
+💰 *Actual Price:* ${selectedPackage.oldPrice}
+✅ *Offer Price:* ${selectedPackage.price}
+
+🧪 *Included Tests:*
+${selectedPackage.tests.split(',').map(t => `• ${t.trim()}`).join('\n')}
+
+📅 Please share available appointment slots.
+
+Thank you!
+`;
+
+  window.open(
+    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+    '_blank'
+  );
+});
